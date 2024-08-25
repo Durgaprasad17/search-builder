@@ -1,0 +1,40 @@
+// script.js
+
+// List of fruits stored in an array
+const fruits = [
+    "Apple",
+    "Banana",
+    "Orange",
+    "Mango",
+    "Pineapple",
+    "Strawberry",
+    "Grapes",
+    "Watermelon",
+    "Papaya",
+    "Kiwi"
+];
+
+// Function to display the fruits in the list
+function displayFruits(fruitArray) {
+    const fruitList = document.getElementById('fruitList');
+    fruitList.innerHTML = ''; // Clear previous list
+
+    fruitArray.forEach(fruit => {
+        const li = document.createElement('li');
+        li.textContent = fruit;
+        fruitList.appendChild(li);
+    });
+}
+
+// Function to filter the list of fruits based on the search input
+function filterFruits(event) {
+    const searchTerm = event.target.value.toLowerCase();
+    const filteredFruits = fruits.filter(fruit => fruit.toLowerCase().includes(searchTerm));
+    displayFruits(filteredFruits);
+}
+
+// Attach the filter function to the search bar's input event
+document.getElementById('searchBar').addEventListener('input', filterFruits);
+
+// Initial display of all fruits
+displayFruits(fruits);
