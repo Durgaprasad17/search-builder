@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Search Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #searchBar {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px;
+            font-size: 18px;
+        }
+        li:not(:last-child) {
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fruit Search Filter</h1>
+    <input type="text" id="searchBar" placeholder="Search for a fruit...">
+
+    <ul id="fruitList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
